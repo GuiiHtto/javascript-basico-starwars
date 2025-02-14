@@ -58,21 +58,21 @@ document.getElementById('userName').innerHTML = userName;
 // Posso sacar dinheiro em caixas eletrônicos
 // Para poder comprar em lugares que não aceitam o cartão de débito ou crédito.
 
-let balance = 1000;
+// let balance = 1000;
 
-function withdraw(amount) {
-    if (amount > balance) {
-        console.log('Saldo insuficiente');
-    } else if (amount > 700) {  
-        console.log('Valor máximo por saque é de 700 reais');
-    } else {
-        balance = balance - amount;
-    }
+// function withdraw(amount) {
+//     if (amount > balance) {
+//         console.log('Saldo insuficiente');
+//     } else if (amount > 700) {  
+//         console.log('Valor máximo por saque é de 700 reais');
+//     } else {
+//         balance = balance - amount;
+//     }
     
-}
+// }
 
-withdraw(701);
-console.log(balance);
+// withdraw(701);
+// console.log(balance);
 
 // Cenário 1: Saque com sucesso
 // Dado que meu saldo é de 1000 reais
@@ -93,3 +93,26 @@ console.log(balance);
 // Quando eu faço um saque de 701 reais
 // Então não deve deduzir do meu saldo
 // E deve exibir uma mensagem de alerta informando que o valor excede o limite por operação.
+
+// Arrays
+
+// let gaveteiro = ['Meias', 'Gravatas', 'Documentos', 'Salgadinhos'];
+
+// console.log(gaveteiro[0]);
+
+let characters = ['Master Yoda', 'Luke Skywalker', 'Princess Leia', 'Darth Vader'];
+
+characters.push('C3PO');
+characters.push('R2D2');
+
+// characters.pop();
+
+characters = characters.filter(function(item) {
+    return item !== 'Darth Vader';
+});
+
+characters = characters.filter(function(item) {
+    return item === 'Master Yoda';
+});
+
+console.log(characters);
