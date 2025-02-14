@@ -46,8 +46,50 @@ document.getElementById('userName').innerHTML = userName;
 
 // boasVindas('Guilherme');
 
-function sum(n1, n2) {
-    return n1 + n2;
+// function sum(n1, n2) {
+//     return n1 + n2;
+// }
+// let result = sum (5, 5);
+// console.log(result);
+
+// Controle de fluxos
+
+// Sendo um cliente correntista do banco
+// Posso sacar dinheiro em caixas eletrônicos
+// Para poder comprar em lugares que não aceitam o cartão de débito ou crédito.
+
+let balance = 1000;
+
+function withdraw(amount) {
+    if (amount > balance) {
+        console.log('Saldo insuficiente');
+    } else if (amount > 700) {  
+        console.log('Valor máximo por saque é de 700 reais');
+    } else {
+        balance = balance - amount;
+    }
+    
 }
-let result = sum (5, 5);
-console.log(result);
+
+withdraw(701);
+console.log(balance);
+
+// Cenário 1: Saque com sucesso
+// Dado que meu saldo é de 1000 reais
+// Quando eu sacar 500 reais
+// Então o valor do saque deve ser deduzido do meu saldo final, que passa a ser de 500 reais.
+
+
+
+// Cenário 2: Saque com valor superior ao saldo
+// Dado que meu saldo é de 1000 reais
+// Quando eu faço um saque de 1001 reais
+// Então não deve deduzir do meu saldo
+// E deve exibir uma mensagem de alerta informando que o valor é superior ao saldo.
+
+// Cenaŕio 3: Saque com valor máximo
+// Dado que meu saldo é de 1000 reais
+// E o valor máximo de saque por operação é de 700 reais
+// Quando eu faço um saque de 701 reais
+// Então não deve deduzir do meu saldo
+// E deve exibir uma mensagem de alerta informando que o valor excede o limite por operação.
