@@ -18,13 +18,13 @@
                 <small>Olá, {{ userName }}</small>
             </div>
             <form>
-                <input placeholder="Search by Name" v-model="searchName">
-                <button type="button" @click="search()">Search</button>
+                <input placeholder="Search by Name" v-model="searchName" aria-label="Search by Name">
+                <button type="button" @click="search()">Search</button aria-label="Search">
             </form>
         </div>
         <div class="characters">
             <div class="item" v-for="item of characters">
-                <img :src="item.avatar" :alt="item.name">
+                <img :src="item.avatar" :alt="item.alt">
                 <p>{{item.name}}</p>
                 <span @click="like(item.name)" class="like material-symbols-outlined">
                     favorite
