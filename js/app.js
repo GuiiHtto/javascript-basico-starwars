@@ -16,13 +16,19 @@ document.getElementById('userName').innerHTML = userName;
 
 // Operadores matemáticos
 
-let n1 = 7;
-let n2 = 2.5;
+// let n1 = 7;
+// let n2 = 2.5;
 
-console.log(typeof n1);
-console.log(typeof n2);
+// console.log(typeof n1);
+// console.log(typeof n2);
 
-let total = n1 / n2;
-console.log(total);
+// let total = n1 / n2;
+// console.log(total);
 
+// Operadores de comparação
 
+let v1 = 5;
+let v2 = '5';
+
+let result = v1 !== v2;
+console.log(result);
