@@ -68,6 +68,15 @@ const App = new Vue({
        like(characterName) {
             alert(`You gave a like to ${characterName}`)
        },
+       remove(id) {
+           const list = this.characters
+
+           const result = list.filter(item => {
+                return item.id !== id
+       })
+
+         this.characters = result
+       },
        search(){
 
             if (this.searchName === '') {

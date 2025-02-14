@@ -23,6 +23,7 @@
                 <img :src="item.avatar" :alt="item.name">
                 <p>{{item.name}}</p>
                 <button @click="like(item.name)">Like</button>
+                <button type="button" @click="remove(item.id)">Remove</button>
             </div>
         </div>
 
